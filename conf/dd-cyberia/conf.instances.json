@@ -1,0 +1,260 @@
+[
+  {
+    "id": "mmo-server",
+    "metadata": {
+      "name": "Cyberia MMO Server",
+      "description": "The MMO server for the Cyberia Online game.",
+      "owner": "underpostnet",
+      "repository": "underpostnet/cyberia-server"
+    },
+    "host": "server.cyberiaonline.com",
+    "path": "/",
+    "runtime": "cyberia-server",
+    "image": "underpost/cyberia-server:v3.4.5",
+    "fromPort": 8081,
+    "toPort": 8081,
+    "fromDebugPort": 8083,
+    "toDebugPort": 8083,
+    "cmd": {
+      "development": [
+        "set -a && . /home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-server/env/development.env && set +a && export SERVER_PORT=8083 && exec /home/dd/engine/cyberia-server/server --data-server-url=$CYBERIA_DATA_SERVER_URL --data-server-grpc={{grpc-service-dns}}"
+      ],
+      "production": [
+        "set -a && . /home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-server/env/production.env && set +a && exec /home/dd/engine/cyberia-server/server --data-server-url=$CYBERIA_DATA_SERVER_URL --data-server-grpc={{grpc-service-dns}}"
+      ]
+    },
+    "lifecycle": {
+      "development": {
+        "imagePullPolicy": "Always",
+        "postStart": {
+          "exec": {
+            "command": [
+              "sh",
+              "-c",
+              "underpost state set container-status dd-cyberia-mmo-server-development-initializing-deployment || true"
+            ]
+          }
+        },
+        "preStop": {
+          "exec": {
+            "command": [
+              "sh",
+              "-c",
+              "underpost state set container-status dd-cyberia-mmo-server-development-stopping-deployment || true"
+            ]
+          }
+        }
+      },
+      "production": {
+        "imagePullPolicy": "Always",
+        "postStart": {
+          "exec": {
+            "command": [
+              "sh",
+              "-c",
+              "underpost state set container-status dd-cyberia-mmo-server-production-initializing-deployment || true"
+            ]
+          }
+        },
+        "preStop": {
+          "exec": {
+            "command": [
+              "sh",
+              "-c",
+              "underpost state set container-status dd-cyberia-mmo-server-production-stopping-deployment || true"
+            ]
+          }
+        }
+      }
+    },
+    "readinessProbe": {
+      "development": {
+        "tcpSocket": {
+          "port": 8083
+        },
+        "initialDelaySeconds": 3,
+        "periodSeconds": 5,
+        "timeoutSeconds": 3,
+        "failureThreshold": 6
+      },
+      "production": {
+        "tcpSocket": {
+          "port": 8081
+        },
+        "initialDelaySeconds": 3,
+        "periodSeconds": 5,
+        "timeoutSeconds": 3,
+        "failureThreshold": 6
+      }
+    },
+    "livenessProbe": {
+      "development": {
+        "tcpSocket": {
+          "port": 8083
+        },
+        "initialDelaySeconds": 30,
+        "periodSeconds": 20,
+        "timeoutSeconds": 5,
+        "failureThreshold": 3
+      },
+      "production": {
+        "tcpSocket": {
+          "port": 8081
+        },
+        "initialDelaySeconds": 30,
+        "periodSeconds": 20,
+        "timeoutSeconds": 5,
+        "failureThreshold": 3
+      }
+    },
+    "volumes": [
+      {
+        "volumeName": "instance-cyberia-server",
+        "claimName": "instance-cyberia-server",
+        "volumeMountPath": "/home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-server/env"
+      }
+    ],
+    "multiInstance": {
+      "variants": [
+        "/",
+        "/FOREST",
+        "/TEST"
+      ]
+    },
+    "customStatusPages": [
+      {
+        "status": "404",
+        "hostPath": "./public/404/index.html"
+      }
+    ]
+  },
+  {
+    "id": "mmo-client",
+    "metadata": {
+      "name": "Cyberia MMO Client",
+      "description": "The MMO client for the Cyberia Online game.",
+      "owner": "underpostnet",
+      "repository": "underpostnet/cyberia-client"
+    },
+    "host": "client.cyberiaonline.com",
+    "path": "/",
+    "runtime": "cyberia-client",
+    "image": "underpost/cyberia-client:v3.4.5",
+    "fromPort": 8081,
+    "toPort": 8081,
+    "fromDebugPort": 8082,
+    "toDebugPort": 8082,
+    "cmd": {
+      "development": [
+        "set -a && . /home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-client/env/development.env && set +a && exec python3 /home/dd/engine/cyberia-client/wasm-driver.py --port=8082 --directory=/home/dd/engine/cyberia-client/bin --data-server-url=$CYBERIA_DATA_SERVER_URL"
+      ],
+      "production": [
+        "set -a && . /home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-client/env/production.env && set +a && exec python3 /home/dd/engine/cyberia-client/wasm-driver.py --port=8081 --directory=/home/dd/engine/cyberia-client/bin --data-server-url=$CYBERIA_DATA_SERVER_URL"
+      ]
+    },
+    "lifecycle": {
+      "development": {
+        "imagePullPolicy": "Always",
+        "postStart": {
+          "exec": {
+            "command": [
+              "sh",
+              "-c",
+              "underpost state set container-status dd-cyberia-mmo-client-development-initializing-deployment || true"
+            ]
+          }
+        },
+        "preStop": {
+          "exec": {
+            "command": [
+              "sh",
+              "-c",
+              "underpost state set container-status dd-cyberia-mmo-client-development-stopping-deployment || true"
+            ]
+          }
+        }
+      },
+      "production": {
+        "imagePullPolicy": "Always",
+        "postStart": {
+          "exec": {
+            "command": [
+              "sh",
+              "-c",
+              "underpost state set container-status dd-cyberia-mmo-client-production-initializing-deployment || true"
+            ]
+          }
+        },
+        "preStop": {
+          "exec": {
+            "command": [
+              "sh",
+              "-c",
+              "underpost state set container-status dd-cyberia-mmo-client-production-stopping-deployment || true"
+            ]
+          }
+        }
+      }
+    },
+    "readinessProbe": {
+      "development": {
+        "tcpSocket": {
+          "port": 8082
+        },
+        "initialDelaySeconds": 2,
+        "periodSeconds": 5,
+        "timeoutSeconds": 3,
+        "failureThreshold": 6
+      },
+      "production": {
+        "tcpSocket": {
+          "port": 8081
+        },
+        "initialDelaySeconds": 2,
+        "periodSeconds": 5,
+        "timeoutSeconds": 3,
+        "failureThreshold": 6
+      }
+    },
+    "livenessProbe": {
+      "development": {
+        "tcpSocket": {
+          "port": 8082
+        },
+        "initialDelaySeconds": 30,
+        "periodSeconds": 20,
+        "timeoutSeconds": 5,
+        "failureThreshold": 3
+      },
+      "production": {
+        "tcpSocket": {
+          "port": 8081
+        },
+        "initialDelaySeconds": 30,
+        "periodSeconds": 20,
+        "timeoutSeconds": 5,
+        "failureThreshold": 3
+      }
+    },
+    "volumes": [
+      {
+        "volumeName": "instance-cyberia-client",
+        "claimName": "instance-cyberia-client",
+        "volumeMountPath": "/home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-client/env"
+      }
+    ],
+    "multiInstance": {
+      "variants": [
+        "/",
+        "/FOREST",
+        "/TEST"
+      ]
+    },
+    "customStatusPages": [
+      {
+        "status": "404",
+        "hostPath": "./assets/404/index.html"
+      }
+    ]
+  }
+]

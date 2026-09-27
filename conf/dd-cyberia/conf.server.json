@@ -1,0 +1,391 @@
+{
+    "underpost.net": {
+        "/": {
+            "client": "underpost",
+            "runtime": "nodejs",
+            "apis": [
+                "user",
+                "wallet-account",
+                "file",
+                "test",
+                "document"
+            ],
+            "apiBaseProxyPath": null,
+            "apiBaseHost": null,
+            "origins": [],
+            "ws": "core",
+            "peer": true,
+            "proxy": [
+                80,
+                443
+            ],
+            "db": {
+                "provider": "mongoose",
+                "host": "env:DB_HOST",
+                "name": "env:DB_NAME_NEXODEV",
+                "replicaSet": "env:DB_REPLICA_SET:rs0",
+                "authSource": "env:DB_AUTH_SOURCE:admin",
+                "user": "env:DB_USER:",
+                "password": "env:DB_PASSWORD:"
+            },
+            "valkey": {
+                "port": "env:VALKEY_PORT",
+                "host": "env:VALKEY_HOST"
+            },
+            "mailer": {
+                "sender": {
+                    "email": "env:MAILER_SENDER_EMAIL",
+                    "name": "env:MAILER_SENDER_NAME"
+                },
+                "transport": {
+                    "host": "env:SMTP_HOST",
+                    "port": "env:SMTP_PORT",
+                    "secure": true,
+                    "auth": {
+                        "user": "env:SMTP_AUTH_USER",
+                        "pass": "env:SMTP_AUTH_PASS"
+                    }
+                }
+            }
+        }
+    },
+    "www.underpost.net": {
+        "/": {
+            "client": null,
+            "runtime": "nodejs",
+            "apis": [],
+            "origins": [],
+            "proxy": [
+                80,
+                443
+            ],
+            "redirect": "https://underpost.net"
+        }
+    },
+    "www.cyberiaonline.com": {
+        "/": {
+            "client": "cyberia-portal",
+            "runtime": "nodejs",
+            "apis": [
+                "core",
+                "file",
+                "user",
+                "wallet-account",
+                "document",
+                "instance",
+                "object-layer",
+                "cyberia-item-catalog",
+                "object-layer-render-frames",
+                "atlas-sprite-sheet",
+                "ipfs",
+                "cyberia-entity",
+                "cyberia-map",
+                "cyberia-instance",
+                "cyberia-instance-conf",
+                "cyberia-dialogue",
+                "cyberia-quest",
+                "cyberia-quest-progress",
+                "cyberia-action",
+                "cyberia-skill",
+                "cyberia-entity-type-default",
+                "cyberia-client-hints",
+                "cyberia-saga",
+                "cyberia-audio",
+                "cyberia-map-audio-conf",
+                "cyberia-server-registry",
+                "cyberia-global-map-code-registry",
+                "cyberia-content-release"
+            ],
+            "ws": "core",
+            "peer": true,
+            "origins": [
+                "https://www.cyberiaonline.com",
+                "https://server.cyberiaonline.com",
+                "https://client.cyberiaonline.com"
+            ],
+            "proxy": [
+                80,
+                443
+            ],
+            "db": {
+                "provider": "mongoose",
+                "host": "env:DB_HOST",
+                "name": "env:DB_NAME_CYBERIA",
+                "replicaSet": "env:DB_REPLICA_SET:rs0",
+                "authSource": "env:DB_AUTH_SOURCE:admin",
+                "user": "env:DB_USER:",
+                "password": "env:DB_PASSWORD:",
+                "partitions": {
+                    "content": {
+                        "name": "env:DB_NAME_CYBERIA_CONTENT",
+                        "apis": [
+                            "cyberia-entity",
+                            "cyberia-map",
+                            "cyberia-instance",
+                            "cyberia-instance-conf",
+                            "cyberia-dialogue",
+                            "cyberia-quest",
+                            "cyberia-action",
+                            "cyberia-skill",
+                            "cyberia-entity-type-default",
+                            "cyberia-client-hints",
+                            "cyberia-saga",
+                            "cyberia-audio",
+                            "cyberia-map-audio-conf",
+                            "cyberia-item-catalog",
+                            "object-layer",
+                            "object-layer-render-frames",
+                            "atlas-sprite-sheet",
+                            "ipfs"
+                        ]
+                    }
+                }
+            },
+            "valkey": {
+                "port": "env:VALKEY_PORT",
+                "host": "env:VALKEY_HOST"
+            },
+            "mailer": {
+                "sender": {
+                    "email": "env:MAILER_SENDER_EMAIL_CYBERIA",
+                    "name": "env:MAILER_SENDER_NAME_CYBERIA"
+                },
+                "transport": {
+                    "host": "env:SMTP_HOST_CYBERIA",
+                    "port": "env:SMTP_PORT_CYBERIA",
+                    "secure": true,
+                    "auth": {
+                        "user": "env:SMTP_AUTH_USER_CYBERIA",
+                        "pass": "env:SMTP_AUTH_PASS_CYBERIA"
+                    }
+                }
+            },
+            "grpc": {
+                "module": "cyberia",
+                "port": 50051
+            },
+            "consumes": {
+                "object-layer": "object-layer",
+                "object-layer-render-frames": "object-layer",
+                "atlas-sprite-sheet": "object-layer",
+                "ipfs": "object-layer"
+            },
+            "apiExtensions": {
+                "object-layer": "cyberia",
+                "atlas-sprite-sheet": "cyberia"
+            }
+        }
+    },
+    "cyberiaonline.com": {
+        "/": {
+            "client": null,
+            "apis": [],
+            "runtime": "nodejs",
+            "origins": [],
+            "redirect": "https://www.cyberiaonline.com",
+            "proxy": [
+                80,
+                443
+            ]
+        }
+    },
+    "cryptokoyn.net": {
+        "/": {
+            "client": "cryptokoyn",
+            "runtime": "nodejs",
+            "apis": [
+                "core",
+                "file",
+                "user",
+                "wallet-account",
+                "document"
+            ],
+            "origins": [],
+            "ws": "core",
+            "peer": true,
+            "proxy": [
+                80,
+                443
+            ],
+            "db": {
+                "provider": "mongoose",
+                "host": "env:DB_HOST",
+                "name": "env:DB_NAME_CRYPTOKOYN",
+                "replicaSet": "env:DB_REPLICA_SET:rs0",
+                "authSource": "env:DB_AUTH_SOURCE:admin",
+                "user": "env:DB_USER:",
+                "password": "env:DB_PASSWORD:"
+            },
+            "valkey": {
+                "port": "env:VALKEY_PORT",
+                "host": "env:VALKEY_HOST"
+            },
+            "mailer": {
+                "sender": {
+                    "email": "env:MAILER_SENDER_EMAIL",
+                    "name": "env:MAILER_SENDER_NAME"
+                },
+                "transport": {
+                    "host": "env:SMTP_HOST",
+                    "port": "env:SMTP_PORT",
+                    "secure": true,
+                    "auth": {
+                        "user": "env:SMTP_AUTH_USER",
+                        "pass": "env:SMTP_AUTH_PASS"
+                    }
+                }
+            }
+        }
+    },
+    "www.cryptokoyn.net": {
+        "/": {
+            "client": null,
+            "runtime": "nodejs",
+            "apis": [],
+            "origins": [],
+            "proxy": [
+                80,
+                443
+            ],
+            "redirect": "https://cryptokoyn.net"
+        }
+    },
+    "itemledger.com": {
+        "/": {
+            "client": "itemledger",
+            "runtime": "nodejs",
+            "apis": [
+                "core",
+                "file",
+                "user",
+                "wallet-account",
+                "document",
+                "item-ledger",
+                "item-ledger-transfer",
+                "item-ledger-balance",
+                "item-ledger-checkpoint"
+            ],
+            "origins": [
+                "https://itemledger.com",
+                "https://objectlayer.org",
+                "https://www.cyberiaonline.com"
+            ],
+            "ws": "core",
+            "peer": true,
+            "proxy": [
+                80,
+                443
+            ],
+            "db": {
+                "provider": "mongoose",
+                "host": "env:DB_HOST",
+                "name": "env:DB_NAME_ITEMLEDGER",
+                "replicaSet": "env:DB_REPLICA_SET:rs0",
+                "authSource": "env:DB_AUTH_SOURCE:admin",
+                "user": "env:DB_USER:",
+                "password": "env:DB_PASSWORD:"
+            },
+            "valkey": {
+                "port": "env:VALKEY_PORT",
+                "host": "env:VALKEY_HOST"
+            },
+            "mailer": {
+                "sender": {
+                    "email": "env:MAILER_SENDER_EMAIL",
+                    "name": "env:MAILER_SENDER_NAME"
+                },
+                "transport": {
+                    "host": "env:SMTP_HOST",
+                    "port": "env:SMTP_PORT",
+                    "secure": true,
+                    "auth": {
+                        "user": "env:SMTP_AUTH_USER",
+                        "pass": "env:SMTP_AUTH_PASS"
+                    }
+                }
+            }
+        }
+    },
+    "www.itemledger.com": {
+        "/": {
+            "client": null,
+            "runtime": "nodejs",
+            "apis": [],
+            "origins": [],
+            "proxy": [
+                80,
+                443
+            ],
+            "redirect": "https://itemledger.com"
+        }
+    },
+    "objectlayer.org": {
+        "/": {
+            "client": "objectlayer",
+            "runtime": "nodejs",
+            "apis": [
+                "core",
+                "file",
+                "user",
+                "wallet-account",
+                "document",
+                "object-layer",
+                "object-layer-render-frames",
+                "atlas-sprite-sheet",
+                "ipfs"
+            ],
+            "origins": [
+                "https://objectlayer.org",
+                "https://itemledger.com",
+                "https://www.cyberiaonline.com"
+            ],
+            "ws": "core",
+            "peer": true,
+            "proxy": [
+                80,
+                443
+            ],
+            "db": {
+                "provider": "mongoose",
+                "host": "env:DB_HOST",
+                "name": "env:DB_NAME_OBJECTLAYER",
+                "replicaSet": "env:DB_REPLICA_SET:rs0",
+                "authSource": "env:DB_AUTH_SOURCE:admin",
+                "user": "env:DB_USER:",
+                "password": "env:DB_PASSWORD:"
+            },
+            "valkey": {
+                "port": "env:VALKEY_PORT",
+                "host": "env:VALKEY_HOST"
+            },
+            "mailer": {
+                "sender": {
+                    "email": "env:MAILER_SENDER_EMAIL",
+                    "name": "env:MAILER_SENDER_NAME"
+                },
+                "transport": {
+                    "host": "env:SMTP_HOST",
+                    "port": "env:SMTP_PORT",
+                    "secure": true,
+                    "auth": {
+                        "user": "env:SMTP_AUTH_USER",
+                        "pass": "env:SMTP_AUTH_PASS"
+                    }
+                }
+            }
+        }
+    },
+    "www.objectlayer.org": {
+        "/": {
+            "client": null,
+            "runtime": "nodejs",
+            "apis": [],
+            "origins": [],
+            "proxy": [
+                80,
+                443
+            ],
+            "redirect": "https://objectlayer.org"
+        }
+    }
+}

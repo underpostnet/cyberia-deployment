@@ -1,0 +1,202 @@
+{
+  "Underpost": {
+    "head": ["Seo", "PwaUnderpost", "Microdata", "UnderpostScripts", "Css"],
+    "body": ["CacheControl", "DefaultSplashScreen"],
+    "mailer": {
+      "userVerifyEmail": "DefaultVerifyEmail",
+      "userRecoverEmail": "DefaultRecoverEmail"
+    },
+    "views": [
+      {
+        "path": "/offline",
+        "title": "No Network Connection",
+        "client": "NoNetworkConnection",
+        "head": [],
+        "body": [],
+        "offlineDefault": true
+      },
+      {
+        "path": "/maintenance",
+        "title": "Server Maintenance",
+        "client": "Maintenance",
+        "head": [],
+        "body": [],
+        "maintenanceDefault": true
+      },
+      {
+        "path": "/test",
+        "title": "Test",
+        "client": "Test",
+        "head": [],
+        "body": []
+      },
+      {
+        "path": "/404",
+        "title": "404 Not Found",
+        "client": "NotFound",
+        "head": [],
+        "body": []
+      }
+    ]
+  },
+  "CyberiaPortal": {
+    "head": ["Seo", "PwaCyberia", "Microdata", "CyberiaPortalScripts", "Css"],
+    "body": ["CacheControl", "DefaultSplashScreen", "SwaggerDarkMode"],
+    "mailer": {
+      "userVerifyEmail": "DefaultVerifyEmail",
+      "userRecoverEmail": "DefaultRecoverEmail"
+    },
+    "views": [
+      {
+        "path": "/offline",
+        "title": "No Network Connection",
+        "client": "NoNetworkConnection",
+        "head": [],
+        "body": [],
+        "offlineDefault": true
+      },
+      {
+        "path": "/maintenance",
+        "title": "Server Maintenance",
+        "client": "Maintenance",
+        "head": [],
+        "body": [],
+        "maintenanceDefault": true
+      },
+      {
+        "path": "/test",
+        "title": "Test",
+        "client": "Test",
+        "head": [],
+        "body": []
+      },
+      {
+        "path": "/404",
+        "title": "404 Instance Not Found",
+        "client": "Cyberia404",
+        "head": [],
+        "body": []
+      }
+    ]
+  },
+  "Cryptokoyn": {
+    "head": ["Seo", "PwaCryptokoyn", "Microdata", "CryptokoynScripts", "Css"],
+    "body": ["CacheControl", "DefaultSplashScreen"],
+    "mailer": {
+      "userVerifyEmail": "DefaultVerifyEmail",
+      "userRecoverEmail": "DefaultRecoverEmail"
+    },
+    "views": [
+      {
+        "path": "/offline",
+        "title": "No Network Connection",
+        "client": "NoNetworkConnection",
+        "head": [],
+        "body": [],
+        "offlineDefault": true
+      },
+      {
+        "path": "/maintenance",
+        "title": "Server Maintenance",
+        "client": "Maintenance",
+        "head": [],
+        "body": [],
+        "maintenanceDefault": true
+      },
+      {
+        "path": "/test",
+        "title": "Test",
+        "client": "Test",
+        "head": [],
+        "body": []
+      },
+      {
+        "path": "/404",
+        "title": "404 Not Found",
+        "client": "NotFound",
+        "head": [],
+        "body": []
+      }
+    ]
+  },
+  "Itemledger": {
+    "head": ["Seo", "PwaItemledger", "Microdata", "ItemledgerScripts", "Css"],
+    "body": ["CacheControl", "DefaultSplashScreen"],
+    "mailer": {
+      "userVerifyEmail": "DefaultVerifyEmail",
+      "userRecoverEmail": "DefaultRecoverEmail"
+    },
+    "views": [
+      {
+        "path": "/offline",
+        "title": "No Network Connection",
+        "client": "NoNetworkConnection",
+        "head": [],
+        "body": [],
+        "offlineDefault": true
+      },
+      {
+        "path": "/maintenance",
+        "title": "Server Maintenance",
+        "client": "Maintenance",
+        "head": [],
+        "body": [],
+        "maintenanceDefault": true
+      },
+      {
+        "path": "/test",
+        "title": "Test",
+        "client": "Test",
+        "head": [],
+        "body": []
+      },
+      {
+        "path": "/404",
+        "title": "404 Not Found",
+        "client": "NotFound",
+        "head": [],
+        "body": []
+      }
+    ]
+  },
+  "Objectlayer": {
+    "head": ["Seo", "PwaObjectlayer", "Microdata", "ObjectlayerScripts", "Css"],
+    "body": ["CacheControl", "DefaultSplashScreen"],
+    "mailer": {
+      "userVerifyEmail": "DefaultVerifyEmail",
+      "userRecoverEmail": "DefaultRecoverEmail"
+    },
+    "views": [
+      {
+        "path": "/offline",
+        "title": "No Network Connection",
+        "client": "NoNetworkConnection",
+        "head": [],
+        "body": [],
+        "offlineDefault": true
+      },
+      {
+        "path": "/maintenance",
+        "title": "Server Maintenance",
+        "client": "Maintenance",
+        "head": [],
+        "body": [],
+        "maintenanceDefault": true
+      },
+      {
+        "path": "/test",
+        "title": "Test",
+        "client": "Test",
+        "head": [],
+        "body": []
+      },
+      {
+        "path": "/404",
+        "title": "404 Not Found",
+        "client": "NotFound",
+        "head": [],
+        "body": []
+      }
+    ]
+  }
+}
