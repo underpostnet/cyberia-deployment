@@ -115,11 +115,7 @@
       }
     ],
     "multiInstance": {
-      "variants": [
-        "/",
-        "/FOREST",
-        "/TEST"
-      ]
+      "variants": ["/", "/test"]
     },
     "customStatusPages": [
       {
@@ -244,11 +240,7 @@
       }
     ],
     "multiInstance": {
-      "variants": [
-        "/",
-        "/FOREST",
-        "/TEST"
-      ]
+      "variants": ["/", "/test"]
     },
     "customStatusPages": [
       {

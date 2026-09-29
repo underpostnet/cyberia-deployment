@@ -311,7 +311,7 @@
     },
     "publicRef": "cyberia",
     "components": {
-      "object-layer": [
+      "objectlayer-studio": [
         "ObjectLayerProtocol",
         "ObjectLayerEngine",
         "ObjectLayerEngineModal",
@@ -319,6 +319,7 @@
         "RenderSource",
         "PixelRegion",
         "PixelTemplate",
+        "FrameMutation",
         "ObjectLayerContextPanel",
         "ObjectLayerPalettePanel"
       ],
@@ -332,9 +333,11 @@
         "InstanceSelectionView",
         "MapPlacementCyberia",
         "MapStudioCyberia",
+        "MapAudioCyberia",
         "ObjectLayerTemplatesCyberia",
         "ObjectLayerStudioCyberia",
-        "SagaCyberia"
+        "SagaCyberia",
+        "StudioCyberia"
       ],
       "core": [
         "CommonJs",
@@ -389,8 +392,10 @@
         "ClientEvents",
         "Repository",
         "CommandHistory",
+        "EditorCrud",
         "EditorDraftStore",
-        "EditorLayout"
+        "EditorLayout",
+        "Tabs"
       ],
       "cyberia-portal": [
         "AppShellCyberiaPortal",
@@ -465,6 +470,16 @@
       },
       {
         "path": "/object-layer-engine-viewer",
+        "client": "CyberiaPortal",
+        "ssr": "CyberiaPortal"
+      },
+      {
+        "path": "/object-layer",
+        "client": "CyberiaPortal",
+        "ssr": "CyberiaPortal"
+      },
+      {
+        "path": "/cyberia-studio",
         "client": "CyberiaPortal",
         "ssr": "CyberiaPortal"
       },
@@ -586,6 +601,8 @@
       "cyberia-entity-type-default",
       "cyberia-client-hints",
       "cyberia-saga",
+      "cyberia-audio",
+      "cyberia-map-audio-conf",
       "item-ledger",
       "item-ledger-balance",
       "item-ledger-transfer"
@@ -900,7 +917,8 @@
         "SocketIoItemledger",
         "SettingsItemledger",
         "TranslateItemledger"
-      ]
+      ],
+      "objectlayer-studio": ["ObjectLayerProtocol", "ObjectLayerEngineViewer"]
     },
     "views": [
       {
@@ -942,6 +960,11 @@
       {
         "path": "/item-ledger-registry",
         "title": "Registry",
+        "client": "Itemledger",
+        "ssr": "Itemledger"
+      },
+      {
+        "path": "/object-layer",
         "client": "Itemledger",
         "ssr": "Itemledger"
       },
@@ -1015,7 +1038,21 @@
         "public_folder": "/dist/vanilla-jsoneditor/standalone.js.map"
       }
     ],
-    "services": ["core", "user", "file", "default", "item-ledger", "item-ledger-balance", "item-ledger-transfer"]
+    "services": [
+      "core",
+      "user",
+      "file",
+      "default",
+      "object-layer",
+      "atlas-sprite-sheet",
+      "item-ledger",
+      "item-ledger-balance",
+      "item-ledger-transfer"
+    ],
+    "apiHosts": {
+      "object-layer": "objectlayer.org",
+      "atlas-sprite-sheet": "objectlayer.org"
+    }
   },
   "objectlayer": {
     "metadata": {
@@ -1058,7 +1095,7 @@
     },
     "publicCopyNonExistingFiles": "cyberia",
     "components": {
-      "object-layer": [
+      "objectlayer-studio": [
         "ObjectLayerProtocol",
         "ObjectLayerEngine",
         "ObjectLayerEngineModal",
@@ -1066,6 +1103,7 @@
         "RenderSource",
         "PixelRegion",
         "PixelTemplate",
+        "FrameMutation",
         "ObjectLayerContextPanel",
         "ObjectLayerPalettePanel"
       ],
@@ -1119,8 +1157,10 @@
         "Repository",
         "ColorPaletteElement",
         "CommandHistory",
+        "EditorCrud",
         "EditorDraftStore",
-        "EditorLayout"
+        "EditorLayout",
+        "Tabs"
       ],
       "objectlayer": [
         "AppShellObjectlayer",
@@ -1175,6 +1215,11 @@
       {
         "path": "/object-layer-engine-viewer",
         "title": "Explorer",
+        "client": "Objectlayer",
+        "ssr": "Objectlayer"
+      },
+      {
+        "path": "/object-layer",
         "client": "Objectlayer",
         "ssr": "Objectlayer"
       },
