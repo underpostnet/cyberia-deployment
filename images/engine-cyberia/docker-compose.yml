@@ -191,12 +191,12 @@ services:
     restart: unless-stopped
 
   # --- engine-cyberia-content (one-shot) -----------------------------------
-  # The content stages of deploy/dd-cyberia/sync-deploy.sh, against the live
-  # engine: build the release from the instance backups, then promote it. It
-  # shares the engine network namespace, as `kubectl exec` shares the pod, so
-  # the Object Layer authority answers on 127.0.0.1. Safe to rerun: a promoted
-  # release is left as it is. Set CONTENT_RELEASE_ID to build a new release.
-  # The id takes the release id rules of sync-deploy.sh: `v3.4.0` -> `v3-4-0`.
+  # A local content release against the live engine: build it from the
+  # artifact the image carries, then promote it. It shares the engine network
+  # namespace, so the Object Layer authority answers on 127.0.0.1. Safe to
+  # rerun: a validated or promoted release is left as it is. Set
+  # CONTENT_RELEASE_ID to build a new release. The id takes the release id rules
+  # of sync-deploy.sh: `v3.4.0` -> `v3-4-0`.
   engine-cyberia-content:
     image: *engine-cyberia-image
     container_name: dd-cyberia-content

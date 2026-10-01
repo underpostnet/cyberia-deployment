@@ -23,8 +23,13 @@ versioned artifact. `content-lock.json` names the artifact this deployment ships
 checks out that source revision of `cyberia-content`, packs it, and fails unless the result matches
 the lock.
 
-`cyberia instance --publish-build` in the [engine](https://github.com/underpostnet/engine) writes
-`conf/`, `images/`, `manifests/` and `content-lock.json`. Never edit them by hand.
+In the [engine](https://github.com/underpostnet/engine), `cyberia instance --publish-build` writes
+`conf/`, `images/` and `manifests/`, and `cyberia content lock` writes `content-lock.json`. Never
+edit them by hand.
+
+A deploy checks out this repository at an exact revision, from this repository or from
+`cyberia-deployment-private`. The source channel changes only that repository. After a deploy from
+the private channel, the deploy publishes the same revision here, fast-forward only.
 
 Application assets belong to the engine source tree in `src/client/public`.
 Private File Storage keeps large assets for authoring.
