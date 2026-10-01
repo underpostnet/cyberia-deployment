@@ -1,0 +1,25 @@
+{
+  "lockVersion": 1,
+  "sources": {
+    "cyberia-audio": {
+      "repository": "underpostnet/cyberia-audio",
+      "revision": "2992826c3adb8fdad3c0f6f1a0b13b93be9fed8e"
+    },
+    "cyberia-client": {
+      "repository": "underpostnet/cyberia-client",
+      "revision": "9f68e2f2b7f5e7ca499ab3d34e7bee6ebdbba023"
+    },
+    "cyberia-content": {
+      "repository": "underpostnet/cyberia-content",
+      "revision": "57fc489e637a5a8f12afa86739e9a13a8b104a13",
+      "artifact": {
+        "version": "3.0.0",
+        "digest": "sha256:f1966bcc5fb6191a1061239970dc1a6fe2afc5a00499ba1013d2ab28bf655822"
+      }
+    },
+    "cyberia-server": {
+      "repository": "underpostnet/cyberia-server",
+      "revision": "bfa1013a701152299babd817f0ea17188f426339"
+    }
+  }
+}
