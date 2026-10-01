@@ -10,25 +10,27 @@
 
 **The deployment state of the Cyberia MMO runtime: which exact artifacts and runtime versions are deployed.**
 
-| Path                | Holds                                                                       |
-| ------------------- | --------------------------------------------------------------------------- |
-| `conf/`             | The deploy configuration of `dd-cyberia`, with the deploy `package.json`    |
-| `images/`           | The runtime images: `engine-cyberia`, `cyberia-server`, `cyberia-client`    |
-| `manifests/`        | The generated Kubernetes manifests                                          |
-| `content-lock.json` | The deployed content artifact: repository, version, source revision, digest |
+| Path                  | Holds                                                                          |
+| --------------------- | ------------------------------------------------------------------------------ |
+| `conf/`               | The deploy configuration of `dd-cyberia`, with the deploy `package.json`       |
+| `images/`             | The runtime images: `engine-cyberia`, `cyberia-server`, `cyberia-client`       |
+| `manifests/`          | The generated Kubernetes manifests                                             |
+| `underpost.lock.json` | The exact revision of every other Cyberia repository, and the content artifact |
 
 This repository holds no content. The content — foundation, instances, sagas — lives in
 [cyberia-content](https://github.com/underpostnet/cyberia-content), which builds it into a
-versioned artifact. `content-lock.json` names the artifact this deployment ships. The image build
-checks out that source revision of `cyberia-content`, packs it, and fails unless the result matches
-the lock.
+versioned artifact. `underpost.lock.json` pins the revision of every repository this deployment
+ships, and the version and digest of the content artifact. A deploy checks out each repository at
+its pinned revision. The image build checks out the pinned revision of `cyberia-content`, packs it,
+and fails unless the result matches the lock.
 
-In the [engine](https://github.com/underpostnet/engine), `cyberia instance --publish-build` writes
-`conf/`, `images/` and `manifests/`, and `cyberia content lock` writes `content-lock.json`. Never
-edit them by hand.
+In the [engine](https://github.com/underpostnet/engine), `cyberia release build` writes `conf/`,
+`images/` and `manifests/`, and `cyberia release lock` writes `underpost.lock.json`. Never edit
+them by hand.
 
-A deploy checks out this repository at an exact revision, from this repository or from
-`cyberia-deployment-private`. The source channel changes only that repository. After a deploy from
+A deploy checks out this repository at the tip of its branch, from this repository or from
+`cyberia-deployment-private`: it holds the lock, so it pins no revision of its own. The source
+channel changes only that repository. After a deploy from
 the private channel, the deploy publishes the same revision here, fast-forward only.
 
 Application assets belong to the engine source tree in `src/client/public`.
