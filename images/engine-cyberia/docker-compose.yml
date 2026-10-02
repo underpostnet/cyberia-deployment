@@ -165,9 +165,10 @@ services:
     container_name: dd-cyberia-content
     network_mode: service:engine-cyberia-runtime
     command:
-      - /bin/sh
-      - -c
-      - id="$$(printf '%s' "$$CONTENT_RELEASE_ID" | tr '[:upper:]' '[:lower:]' | tr -c 'a-z0-9-' '-')" && node bin/cyberia content-release build "$$id" --bootstrap && node bin/cyberia content-release promote "$$id" && . deploy/lib/content-release.sh && wait_for_content_release http://127.0.0.1:4008/api/v1 "$$id"
+      - node
+      - bin/cyberia
+      - run-workflow
+      - import-content
     env_file:
       - ./compose.env
     environment:
@@ -180,7 +181,6 @@ services:
       DB_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD:?}
       VALKEY_HOST: ${VALKEY_HOST:-valkey-service}
       VALKEY_PORT: ${VALKEY_PORT:-6379}
-      CONTENT_RELEASE_ID: ${CONTENT_RELEASE_ID:-${ENGINE_CYBERIA_TAG:-v3.4.5}}
     depends_on:
       engine-cyberia-runtime:
         condition: service_healthy

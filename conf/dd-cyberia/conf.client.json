@@ -28,6 +28,7 @@
     "components": {
       "core": [
         "CommonJs",
+        "BuildManifest",
         "VanillaJs",
         "Responsive",
         "Keyboard",
@@ -169,6 +170,11 @@
         "path": "/user-management",
         "client": "Underpost",
         "ssr": "Underpost"
+      },
+      {
+        "path": "/docs",
+        "client": "Underpost",
+        "ssr": "Underpost"
       }
     ],
     "dists": [
@@ -227,7 +233,10 @@
         "import_name_build": "/dist/dexie/dexie.mjs"
       }
     ],
-    "services": ["default", "core", "user", "file", "test", "document"]
+    "services": ["default", "core", "user", "file", "test", "document"],
+    "docs": {
+      "references": ["./src/client/public/docs"]
+    }
   },
   "cyberia-portal": {
     "metadata": {
@@ -341,6 +350,7 @@
       ],
       "core": [
         "CommonJs",
+        "BuildManifest",
         "VanillaJs",
         "Responsive",
         "Keyboard",
@@ -641,6 +651,7 @@
     "components": {
       "core": [
         "CommonJs",
+        "BuildManifest",
         "VanillaJs",
         "Responsive",
         "Keyboard",
@@ -858,6 +869,7 @@
     "components": {
       "core": [
         "CommonJs",
+        "BuildManifest",
         "VanillaJs",
         "Responsive",
         "Keyboard",
@@ -1109,6 +1121,7 @@
       ],
       "core": [
         "CommonJs",
+        "BuildManifest",
         "VanillaJs",
         "Responsive",
         "Keyboard",
