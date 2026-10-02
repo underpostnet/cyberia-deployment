@@ -167,7 +167,7 @@ services:
     command:
       - /bin/sh
       - -c
-      - id="$$(printf '%s' "$$CONTENT_RELEASE_ID" | tr '[:upper:]' '[:lower:]' | tr -c 'a-z0-9-' '-')" && node bin/cyberia content-release build "$$id" --bootstrap && node bin/cyberia content-release promote "$$id"
+      - id="$$(printf '%s' "$$CONTENT_RELEASE_ID" | tr '[:upper:]' '[:lower:]' | tr -c 'a-z0-9-' '-')" && node bin/cyberia content-release build "$$id" --bootstrap && node bin/cyberia content-release promote "$$id" && . deploy/lib/content-release.sh && wait_for_content_release http://127.0.0.1:4008/api/v1 "$$id"
     env_file:
       - ./compose.env
     environment:
