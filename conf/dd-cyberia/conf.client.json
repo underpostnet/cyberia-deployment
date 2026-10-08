@@ -59,8 +59,6 @@
         "Auth",
         "ViewModeController",
         "RichText",
-        "CalendarCore",
-        "D3Chart",
         "Stream",
         "SocketIo",
         "Documentation",
@@ -310,6 +308,7 @@
         "cyberia-map-audio-conf",
         "cyberia-item-catalog",
         "cyberia-content-release",
+        "cyberia-procedural-job",
         "cyberia-server-registry",
         "wallet-account"
       ],
@@ -328,7 +327,6 @@
         "RenderSource",
         "PixelRegion",
         "PixelTemplate",
-        "FrameMutation",
         "ContextPanel",
         "ObjectLayerPalettePanel"
       ],
@@ -346,7 +344,12 @@
         "ObjectLayerTemplatesCyberia",
         "ObjectLayerStudioCyberia",
         "SagaCyberia",
+        "SagaSyncCyberia",
         "FoundationContextCyberia",
+        "ProceduralEngineCyberia",
+        "ProceduralGridCyberia",
+        "ProceduralPaletteCyberia",
+        "ItemCatalogCyberia",
         "StudioCyberia"
       ],
       "core": [
@@ -520,6 +523,16 @@
         "ssr": "CyberiaPortal"
       },
       {
+        "path": "/cyberia-procedural-engine",
+        "client": "CyberiaPortal",
+        "ssr": "CyberiaPortal"
+      },
+      {
+        "path": "/cyberia-item-catalog",
+        "client": "CyberiaPortal",
+        "ssr": "CyberiaPortal"
+      },
+      {
         "path": "/instance-selection",
         "title": "Select World",
         "client": "CyberiaPortal",
@@ -614,6 +627,10 @@
       "cyberia-saga",
       "cyberia-audio",
       "cyberia-map-audio-conf",
+      "cyberia-procedural-job",
+      "cyberia-procedural-job-item",
+      "cyberia-procedural-profile",
+      "cyberia-item-catalog",
       "item-ledger",
       "item-ledger-balance",
       "item-ledger-transfer"
@@ -684,14 +701,10 @@
         "Auth",
         "ViewModeController",
         "RichText",
-        "CalendarCore",
-        "D3Chart",
         "Stream",
         "SocketIo",
         "Documentation",
         "Docs",
-        "Content",
-        "FileExplorer",
         "Chat",
         "Worker",
         "CssCore",
@@ -931,7 +944,7 @@
         "SettingsItemledger",
         "TranslateItemledger"
       ],
-      "objectlayer-studio": ["ObjectLayerProtocol", "ObjectLayerEngineViewer", "ContextPanel"]
+      "objectlayer-studio": ["ObjectLayerProtocol", "ObjectLayerEngineViewer", "RenderSource", "ContextPanel"]
     },
     "views": [
       {
@@ -1116,7 +1129,6 @@
         "RenderSource",
         "PixelRegion",
         "PixelTemplate",
-        "FrameMutation",
         "ContextPanel",
         "ObjectLayerPalettePanel"
       ],

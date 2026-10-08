@@ -10,6 +10,9 @@
                 "test",
                 "document"
             ],
+            "publicRoutes": [
+                "entry"
+            ],
             "apiBaseProxyPath": null,
             "apiBaseHost": null,
             "origins": [],
@@ -94,7 +97,15 @@
                 "cyberia-map-audio-conf",
                 "cyberia-server-registry",
                 "cyberia-global-map-code-registry",
-                "cyberia-content-release"
+                "cyberia-content-release",
+                "cyberia-procedural-profile",
+                "cyberia-procedural-job",
+                "cyberia-procedural-job-item",
+                "cyberia-procedural-audit"
+            ],
+            "publicRoutes": [
+                "entry",
+                "objectLayer"
             ],
             "ws": "core",
             "peer": true,
@@ -200,6 +211,9 @@
                 "wallet-account",
                 "document"
             ],
+            "publicRoutes": [
+                "entry"
+            ],
             "origins": [],
             "ws": "core",
             "peer": true,
@@ -264,6 +278,10 @@
                 "item-ledger-transfer",
                 "item-ledger-balance",
                 "item-ledger-checkpoint"
+            ],
+            "publicRoutes": [
+                "entry",
+                "objectLayer"
             ],
             "origins": [
                 "https://itemledger.com",
@@ -333,6 +351,10 @@
                 "object-layer-render-frames",
                 "atlas-sprite-sheet",
                 "ipfs"
+            ],
+            "publicRoutes": [
+                "entry",
+                "objectLayer"
             ],
             "origins": [
                 "https://objectlayer.org",
