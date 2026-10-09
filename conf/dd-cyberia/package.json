@@ -145,7 +145,7 @@
         "maxrects-packer": "^2.7.3",
         "pngjs": "^7.0.0",
         "jimp": "^1.6.0",
-        "sharp": "^0.35.4"
+        "sharp": "^0.35.5"
     },
     "devDependencies": {
         "@socketsecurity/cli": "1.4.1",
@@ -172,6 +172,8 @@
             "path-to-regexp": ">=8.4.0"
         },
         "ws": "^8.20.2",
-        "qs": ">=6.16.0"
+        "qs": ">=6.16.0",
+        "proxy-addr": ">=2.0.8",
+        "sharp": ">=0.35.5"
     }
 }
