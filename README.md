@@ -30,8 +30,7 @@ them by hand.
 
 A deploy checks out this repository at the tip of its branch, from this repository or from
 `cyberia-deployment-private`: it holds the lock, so it pins no revision of its own. The source
-channel changes only that repository. After a deploy from
-the private channel, the deploy publishes the same revision here, fast-forward only.
+channel changes only that repository. A deploy never pushes to either repository.
 
 Application assets belong to the engine source tree in `src/client/public`.
 Private File Storage keeps large assets for authoring.
