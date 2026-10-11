@@ -11,10 +11,10 @@
     },
     "cyberia-content": {
       "repository": "underpostnet/cyberia-content",
-      "revision": "14af67cab55399d0888d70ef4a4ba64cae6b9c0f",
+      "revision": "85c5e4f4501b53c1e61a24eaa261eddd2d539804",
       "artifact": {
         "version": "3.0.0",
-        "digest": "sha256:36038f9e06cc1136b6222e379e6b90cc5ccb45fa1b355b950f3e69e31f75a55a"
+        "digest": "sha256:682537e631da18d3e1248c0d787f78248bb1fb459f29b052d7c0c617a206cbeb"
       }
     },
     "cyberia-server": {
