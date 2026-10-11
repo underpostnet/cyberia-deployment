@@ -244,7 +244,7 @@
       "description": "Browser massively multiplayer online role-playing game. Explore a dynamic online sandbox pixel art universe, right from your browser.",
       "keywords": ["cyberia", "MMORPG", "browser", "free", "MMO"],
       "author": "https://github.com/underpostnet",
-      "thumbnail": "assets/splash/CYBERIA.jpg",
+      "thumbnail": "apple-touch-startup-image-1136x640.png",
       "themeColor": "#1a1a1a"
     },
     "docs": {
