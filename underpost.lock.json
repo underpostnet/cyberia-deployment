@@ -7,19 +7,19 @@
     },
     "cyberia-client": {
       "repository": "underpostnet/cyberia-client",
-      "revision": "bfe7ef39d5412ad1cd4ed19ca4994e6b258d778a"
+      "revision": "4ea9960d9297394c70c9748f7e7ea331f82aee67"
     },
     "cyberia-content": {
       "repository": "underpostnet/cyberia-content",
-      "revision": "5dd70d51cf9cb024453c432bf746d0b52e9e24a1",
+      "revision": "f2458ee32f6bb08881ca7827688db2c65e0d0189",
       "artifact": {
         "version": "3.0.0",
-        "digest": "sha256:26f8b50029e586c16ae7db5dc0cdcfd2df5024c196fb793a016a476ea69f4f30"
+        "digest": "sha256:d28ec94c01adba1b971c4e58b1415e8f56c223617d0c8a1177c41b309f564a12"
       }
     },
     "cyberia-server": {
       "repository": "underpostnet/cyberia-server",
-      "revision": "1699aca9c474eee79ca1882a6a6cf41e34ff92f0"
+      "revision": "d933044cee96972bc41ce4788b0675f068231f44"
     }
   }
 }
