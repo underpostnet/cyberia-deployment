@@ -7,7 +7,7 @@
     },
     "cyberia-client": {
       "repository": "underpostnet/cyberia-client",
-      "revision": "5f024e0f180cb6f065c5c9be8b6ce8043c0fa584"
+      "revision": "bfe7ef39d5412ad1cd4ed19ca4994e6b258d778a"
     },
     "cyberia-content": {
       "repository": "underpostnet/cyberia-content",
@@ -19,7 +19,7 @@
     },
     "cyberia-server": {
       "repository": "underpostnet/cyberia-server",
-      "revision": "39ca6c23e633016e5d495c0e7831ea908c7c8a49"
+      "revision": "1699aca9c474eee79ca1882a6a6cf41e34ff92f0"
     }
   }
 }
