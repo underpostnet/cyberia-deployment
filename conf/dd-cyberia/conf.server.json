@@ -73,6 +73,7 @@
                 "core",
                 "file",
                 "user",
+                "google-auth",
                 "wallet-account",
                 "document",
                 "instance",
