@@ -41,7 +41,7 @@
   },
   "CyberiaPortal": {
     "head": ["Seo", "PwaCyberia", "Microdata", "CyberiaPortalScripts", "Css"],
-    "body": ["CacheControl", "DefaultSplashScreen", "SwaggerDarkMode"],
+    "body": ["CacheControl", "DefaultSplashScreen"],
     "mailer": {
       "userVerifyEmail": "DefaultVerifyEmail",
       "userRecoverEmail": "DefaultRecoverEmail"
@@ -76,6 +76,14 @@
         "client": "Cyberia404",
         "head": [],
         "body": []
+      },
+      {
+        "path": "/launch",
+        "title": "Cyberia Online",
+        "client": "CyberiaLaunch",
+        "head": [],
+        "body": [],
+        "headers": { "Cache-Control": "no-store", "Referrer-Policy": "no-referrer" }
       }
     ]
   },
