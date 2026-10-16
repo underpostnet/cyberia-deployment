@@ -3,11 +3,11 @@
   "sources": {
     "cyberia-audio": {
       "repository": "underpostnet/cyberia-audio",
-      "revision": "ddf02a95f3c689aff5c92418d77274a3b1a50d4f"
+      "revision": "66c1d209cb62ef7adb713b3a6d584c781c285bd0"
     },
     "cyberia-client": {
       "repository": "underpostnet/cyberia-client",
-      "revision": "4ea9960d9297394c70c9748f7e7ea331f82aee67"
+      "revision": "b48818dd55b2608719378daac850b003ff963686"
     },
     "cyberia-content": {
       "repository": "underpostnet/cyberia-content",
@@ -19,7 +19,7 @@
     },
     "cyberia-server": {
       "repository": "underpostnet/cyberia-server",
-      "revision": "d933044cee96972bc41ce4788b0675f068231f44"
+      "revision": "8bac3348536bac5fec2ecab734ba09c95be27d17"
     }
   }
 }
