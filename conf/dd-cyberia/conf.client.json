@@ -316,6 +316,10 @@
         "cyberia-audio",
         "cyberia-map-audio-conf",
         "cyberia-item-catalog",
+        "cyberia-economy",
+        "cyberia-economic-item-policy",
+        "cyberia-market",
+        "cyberia-player-audit",
         "cyberia-content-release",
         "cyberia-procedural-job",
         "cyberia-server-registry",
@@ -345,6 +349,10 @@
         "MapEngineCyberia",
         "InstanceEngineCyberia",
         "UniverseEngineCyberia",
+        "EconomyEngineCyberia",
+        "MarketEngineCyberia",
+        "PlayerCyberiaManager",
+        "StudioFormCyberia",
         "GraphLayoutCyberia",
         "ActionEngineCyberia",
         "EntityEngineCyberia",
@@ -529,6 +537,21 @@
         "ssr": "CyberiaPortal"
       },
       {
+        "path": "/cyberia-economy-engine",
+        "client": "CyberiaPortal",
+        "ssr": "CyberiaPortal"
+      },
+      {
+        "path": "/cyberia-market-engine",
+        "client": "CyberiaPortal",
+        "ssr": "CyberiaPortal"
+      },
+      {
+        "path": "/cyberia-player-manager",
+        "client": "CyberiaPortal",
+        "ssr": "CyberiaPortal"
+      },
+      {
         "path": "/docs",
         "client": "CyberiaPortal",
         "ssr": "CyberiaPortal"
@@ -654,6 +677,11 @@
       "cyberia-procedural-profile",
       "cyberia-item-catalog",
       "cyberia-universe",
+      "cyberia-economy",
+      "cyberia-economic-item-policy",
+      "cyberia-market",
+      "cyberia-player",
+      "cyberia-player-audit",
       "cyberia-server-registry",
       "item-ledger",
       "item-ledger-balance",
