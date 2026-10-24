@@ -116,7 +116,8 @@
                 "cyberia-procedural-profile",
                 "cyberia-procedural-job",
                 "cyberia-procedural-job-item",
-                "cyberia-procedural-audit"
+                "cyberia-procedural-audit",
+                "cyberia-procedural-population"
             ],
             "publicRoutes": [
                 "entry",

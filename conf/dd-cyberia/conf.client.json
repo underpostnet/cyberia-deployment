@@ -322,6 +322,7 @@
         "cyberia-player-audit",
         "cyberia-content-release",
         "cyberia-procedural-job",
+        "cyberia-procedural-population",
         "cyberia-server-registry",
         "wallet-account"
       ],
@@ -340,8 +341,7 @@
         "RenderSource",
         "PixelRegion",
         "PixelTemplate",
-        "ContextPanel",
-        "ObjectLayerPalettePanel"
+        "ContextPanel"
       ],
       "cyberia": [
         "SharedDefaultsCyberia",
@@ -369,6 +369,8 @@
         "ProceduralEngineCyberia",
         "ProceduralGridCyberia",
         "ProceduralPaletteCyberia",
+        "ProceduralPopulationCyberia",
+        "ProceduralReviewCyberia",
         "ItemCatalogCyberia",
         "StudioCyberia"
       ],
@@ -675,6 +677,7 @@
       "cyberia-procedural-job",
       "cyberia-procedural-job-item",
       "cyberia-procedural-profile",
+      "cyberia-procedural-population",
       "cyberia-item-catalog",
       "cyberia-universe",
       "cyberia-economy",
@@ -1187,8 +1190,7 @@
         "RenderSource",
         "PixelRegion",
         "PixelTemplate",
-        "ContextPanel",
-        "ObjectLayerPalettePanel"
+        "ContextPanel"
       ],
       "core": [
         "CommonJs",
