@@ -294,39 +294,6 @@
         }
       ],
       "references": ["./src/client/public/docs"],
-      "api": [
-        "cyberia-entity",
-        "cyberia-map",
-        "cyberia-instance",
-        "cyberia-instance-conf",
-        "cyberia-dialogue",
-        "cyberia-quest",
-        "cyberia-quest-progress",
-        "cyberia-universe",
-        "cyberia-player",
-        "cyberia-game-session",
-        "cyberia-game-ticket",
-        "cyberia-social",
-        "cyberia-social-profile",
-        "cyberia-action",
-        "cyberia-skill",
-        "cyberia-entity-type-default",
-        "cyberia-client-hints",
-        "cyberia-saga",
-        "cyberia-audio",
-        "cyberia-map-audio-conf",
-        "cyberia-item-catalog",
-        "cyberia-global-content",
-        "cyberia-economy",
-        "cyberia-economic-item-policy",
-        "cyberia-market",
-        "cyberia-player-audit",
-        "cyberia-content-release",
-        "cyberia-procedural-job",
-        "cyberia-procedural-population",
-        "cyberia-server-registry",
-        "wallet-account"
-      ],
       "integrations": {
         "object-layer": "https://objectlayer.org/docs",
         "item-ledger": "https://itemledger.com/docs"
@@ -404,7 +371,6 @@
         "Polyhedron",
         "SignUp",
         "LogIn",
-        "GoogleSignIn",
         "LogOut",
         "Router",
         "Account",
@@ -450,7 +416,8 @@
         "SettingsCyberiaPortal",
         "SocketIoCyberiaPortal",
         "MainBodyCyberiaPortal"
-      ]
+      ],
+      "google-auth": ["GoogleSignIn", "TranslateGoogleAuth"]
     },
     "views": [
       {
@@ -716,7 +683,6 @@
         "readme": "./src/client/public/docs/cryptokoyn/overview/index.md"
       },
       "references": ["./src/client/public/docs"],
-      "api": ["wallet-account"],
       "integrations": {
         "item-ledger": "https://itemledger.com/docs",
         "object-layer": "https://objectlayer.org/docs"
@@ -934,7 +900,6 @@
         "readme": "./src/client/public/docs/item-ledger/overview/index.md"
       },
       "references": ["./src/client/public/docs"],
-      "api": ["item-ledger", "item-ledger-transfer", "item-ledger-balance", "item-ledger-checkpoint", "wallet-account"],
       "integrations": {
         "object-layer": "https://objectlayer.org/docs"
       }
@@ -1177,7 +1142,6 @@
         "readme": "./src/client/public/docs/object-layer/overview/index.md"
       },
       "references": ["./src/client/public/docs"],
-      "api": ["object-layer", "object-layer-render-frames", "atlas-sprite-sheet", "ipfs"],
       "integrations": {
         "item-ledger": "https://itemledger.com/docs"
       }
