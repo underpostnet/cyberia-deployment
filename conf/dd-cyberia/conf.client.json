@@ -275,7 +275,6 @@
           "**/api/object-layer/**",
           "**/client/**",
           "**/docs/**",
-          "**/hardhat/**",
           "**/node_modules/**"
         ],
         "out": "./public/services.cyberiaonline.com/docs/",
@@ -290,7 +289,7 @@
         {
           "id": "hardhat",
           "label": "Hardhat coverage",
-          "path": "./hardhat"
+          "path": "./cyberia-hardhat"
         }
       ],
       "references": ["./src/client/public/docs"],
@@ -716,7 +715,7 @@
       "typedoc": {
         "name": "Cryptokoyn",
         "entryPoints": ["./src/api/wallet-account"],
-        "exclude": ["**/node_modules/**", "**/docs/**", "**/client/**", "**/hardhat/**"],
+        "exclude": ["**/node_modules/**", "**/docs/**", "**/client/**"],
         "out": "./public/cryptokoyn.net/docs/",
         "readme": "./src/client/public/docs/cryptokoyn/overview/index.md"
       },
@@ -933,7 +932,7 @@
           "./src/api/item-ledger-balance",
           "./src/api/item-ledger-checkpoint"
         ],
-        "exclude": ["**/node_modules/**", "**/docs/**", "**/client/**", "**/hardhat/**"],
+        "exclude": ["**/node_modules/**", "**/docs/**", "**/client/**"],
         "out": "./public/itemledger.com/docs/",
         "readme": "./src/client/public/docs/item-ledger/overview/index.md"
       },
@@ -1175,7 +1174,7 @@
           "./src/api/atlas-sprite-sheet",
           "./src/api/ipfs"
         ],
-        "exclude": ["**/node_modules/**", "**/docs/**", "**/client/**", "**/hardhat/**"],
+        "exclude": ["**/node_modules/**", "**/docs/**", "**/client/**"],
         "out": "./public/objectlayer.org/docs/",
         "readme": "./src/client/public/docs/object-layer/overview/index.md"
       },
