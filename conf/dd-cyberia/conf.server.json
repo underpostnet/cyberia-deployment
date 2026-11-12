@@ -25,7 +25,7 @@
             "db": {
                 "provider": "mongoose",
                 "host": "env:DB_HOST",
-                "name": "env:DB_NAME_NEXODEV",
+                "name": "env:DB_NAME_UNDERPOST",
                 "replicaSet": "env:DB_REPLICA_SET:rs0",
                 "authSource": "env:DB_AUTH_SOURCE:admin",
                 "user": "env:DB_USER:",
@@ -65,7 +65,7 @@
             "redirect": "https://underpost.net"
         }
     },
-    "www.cyberiaonline.com": {
+    "services.cyberiaonline.com": {
         "/": {
             "client": "cyberia-portal",
             "runtime": "nodejs",
@@ -118,7 +118,10 @@
                 "cyberia-procedural-job",
                 "cyberia-procedural-job-item",
                 "cyberia-procedural-audit",
-                "cyberia-procedural-population"
+                "cyberia-procedural-population",
+                "cyberia-content-lifecycle",
+                "cyberia-content-lifecycle-event",
+                "cyberia-saga-workflow"
             ],
             "publicRoutes": [
                 "entry",
@@ -127,7 +130,6 @@
             "ws": "core",
             "peer": true,
             "origins": [
-                "https://www.cyberiaonline.com",
                 "https://server.cyberiaonline.com",
                 "https://client.cyberiaonline.com"
             ],
@@ -206,6 +208,18 @@
                 "object-layer": "cyberia",
                 "atlas-sprite-sheet": "cyberia"
             }
+        }
+    },
+    "www.cyberiaonline.com": {
+        "/": {
+            "client": "cyberia-public",
+            "runtime": "nodejs",
+            "apis": [],
+            "origins": [],
+            "proxy": [
+                80,
+                443
+            ]
         }
     },
     "cyberiaonline.com": {
@@ -307,7 +321,7 @@
             "origins": [
                 "https://itemledger.com",
                 "https://objectlayer.org",
-                "https://www.cyberiaonline.com"
+                "https://services.cyberiaonline.com"
             ],
             "ws": "core",
             "peer": true,
@@ -380,7 +394,7 @@
             "origins": [
                 "https://objectlayer.org",
                 "https://itemledger.com",
-                "https://www.cyberiaonline.com"
+                "https://services.cyberiaonline.com"
             ],
             "ws": "core",
             "peer": true,

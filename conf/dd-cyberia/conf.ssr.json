@@ -40,7 +40,7 @@
     ]
   },
   "CyberiaPortal": {
-    "head": ["Seo", "PwaCyberia", "Microdata", "CyberiaPortalScripts", "Css"],
+    "head": ["Seo", "PwaCyberia", "CyberiaPortalScripts", "Css"],
     "body": ["CacheControl", "DefaultSplashScreen"],
     "mailer": {
       "userVerifyEmail": "DefaultVerifyEmail",
@@ -84,6 +84,27 @@
         "head": [],
         "body": [],
         "headers": { "Cache-Control": "no-store", "Referrer-Policy": "no-referrer" }
+      }
+    ]
+  },
+  "CyberiaPublic": {
+    "head": ["Seo", "Microdata", "CyberiaPublicCss"],
+    "body": ["CyberiaPublicLanding"],
+    "views": [
+      {
+        "path": "/maintenance",
+        "title": "Server Maintenance",
+        "client": "Maintenance",
+        "head": [],
+        "body": [],
+        "maintenanceDefault": true
+      },
+      {
+        "path": "/404",
+        "title": "404 Not Found",
+        "client": "NotFound",
+        "head": [],
+        "body": []
       }
     ]
   },
