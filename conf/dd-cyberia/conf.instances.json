@@ -17,10 +17,10 @@
     "toDebugPort": 8083,
     "cmd": {
       "development": [
-        "set -a && . /home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-server/env/development.env && set +a && export SERVER_PORT=8083 && exec /home/dd/engine/cyberia-server/server --data-server-url=$CYBERIA_DATA_SERVER_URL --data-server-grpc={{grpc-service-dns}}"
+        "export SERVER_PORT=8083 && exec /home/dd/engine/cyberia-server/server --data-server-url=$CYBERIA_DATA_SERVER_URL --data-server-grpc={{grpc-service-dns}}"
       ],
       "production": [
-        "set -a && . /home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-server/env/production.env && set +a && exec /home/dd/engine/cyberia-server/server --data-server-url=$CYBERIA_DATA_SERVER_URL --data-server-grpc={{grpc-service-dns}}"
+        "exec /home/dd/engine/cyberia-server/server --data-server-url=$CYBERIA_DATA_SERVER_URL --data-server-grpc={{grpc-service-dns}}"
       ]
     },
     "lifecycle": {
@@ -107,13 +107,6 @@
         "failureThreshold": 3
       }
     },
-    "volumes": [
-      {
-        "volumeName": "instance-cyberia-server",
-        "claimName": "instance-cyberia-server",
-        "volumeMountPath": "/home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-server/env"
-      }
-    ],
     "multiInstance": {
       "variants": [
         "/",
@@ -145,10 +138,10 @@
     "toDebugPort": 8082,
     "cmd": {
       "development": [
-        "set -a && . /home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-client/env/development.env && set +a && exec python3 /home/dd/engine/cyberia-client/wasm-driver.py --port=8082 --directory=/home/dd/engine/cyberia-client/bin --data-server-url=$CYBERIA_DATA_SERVER_URL"
+        "exec python3 /home/dd/engine/cyberia-client/wasm-driver.py --port=8082 --directory=/home/dd/engine/cyberia-client/bin --data-server-url=$CYBERIA_DATA_SERVER_URL"
       ],
       "production": [
-        "set -a && . /home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-client/env/production.env && set +a && exec python3 /home/dd/engine/cyberia-client/wasm-driver.py --port=8081 --directory=/home/dd/engine/cyberia-client/bin --data-server-url=$CYBERIA_DATA_SERVER_URL"
+        "exec python3 /home/dd/engine/cyberia-client/wasm-driver.py --port=8081 --directory=/home/dd/engine/cyberia-client/bin --data-server-url=$CYBERIA_DATA_SERVER_URL"
       ]
     },
     "lifecycle": {
@@ -235,13 +228,6 @@
         "failureThreshold": 3
       }
     },
-    "volumes": [
-      {
-        "volumeName": "instance-cyberia-client",
-        "claimName": "instance-cyberia-client",
-        "volumeMountPath": "/home/dd/engine/engine-private/conf/dd-cyberia/instances/mmo-client/env"
-      }
-    ],
     "multiInstance": {
       "variants": [
         "/",
