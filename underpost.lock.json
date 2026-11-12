@@ -17,6 +17,10 @@
         "digest": "sha256:ee548f40accf5bbac2574f90bb38b8761e51fab530bbb5a8a876289439c13335"
       }
     },
+    "cyberia-hardhat": {
+      "repository": "underpostnet/cyberia-hardhat",
+      "revision": "cec52830d776d58d1c283724f079b088c19c317a"
+    },
     "cyberia-server": {
       "repository": "underpostnet/cyberia-server",
       "revision": "71532e265d413346649900702a7daaa9ec300d45"
