@@ -219,6 +219,33 @@
             "proxy": [
                 80,
                 443
+            ],
+            "pathRoutes": [
+                {
+                    "id": "portal-views",
+                    "match": {
+                        "kind": "client-views",
+                        "exclude": [
+                            "/",
+                            "/test"
+                        ]
+                    },
+                    "destination": {
+                        "host": "services.cyberiaonline.com"
+                    },
+                    "redirect": true
+                },
+                {
+                    "id": "portal-api-docs",
+                    "match": {
+                        "kind": "PathPrefix",
+                        "path": "/api-docs"
+                    },
+                    "destination": {
+                        "host": "services.cyberiaonline.com"
+                    },
+                    "redirect": true
+                }
             ]
         }
     },
