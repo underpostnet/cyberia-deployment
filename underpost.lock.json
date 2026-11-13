@@ -3,27 +3,27 @@
   "sources": {
     "cyberia-audio": {
       "repository": "underpostnet/cyberia-audio",
-      "revision": "409cb18557efbf75db0bb2af6fb8fe7991353681"
+      "revision": "ef36b16b2e626392d6910cad4db9a0187c20bb83"
     },
     "cyberia-client": {
       "repository": "underpostnet/cyberia-client",
-      "revision": "c4745dd2caec39363c9084492904ffde058935e5"
+      "revision": "1d2478c67ba08f7f9ec6266889950a7dbdbde85e"
     },
     "cyberia-content": {
       "repository": "underpostnet/cyberia-content",
-      "revision": "c1c5399dbd7ab583f6b2f9f598ebd57b1f7ea659",
+      "revision": "86edb08354d3993e9e80efae1583f5760b9ccd60",
       "artifact": {
         "version": "3.0.0",
-        "digest": "sha256:ee548f40accf5bbac2574f90bb38b8761e51fab530bbb5a8a876289439c13335"
+        "digest": "sha256:b420310e686876f8af075d57f46cf7412edc2ffe78a7e61deef4f6270955757c"
       }
     },
     "cyberia-hardhat": {
       "repository": "underpostnet/cyberia-hardhat",
-      "revision": "cec52830d776d58d1c283724f079b088c19c317a"
+      "revision": "89a4336b9ff07aad8ae86161033f326d8aba1ed1"
     },
     "cyberia-server": {
       "repository": "underpostnet/cyberia-server",
-      "revision": "0de9dfbbc71234c514aea159e06ca38ce28a9764"
+      "revision": "171ea0e757e25d98c4445c4e163f47d7e43987da"
     }
   }
 }
