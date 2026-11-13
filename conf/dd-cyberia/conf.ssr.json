@@ -68,7 +68,8 @@
         "title": "Test",
         "client": "Test",
         "head": [],
-        "body": []
+        "body": [],
+        "headers": { "X-Robots-Tag": "noindex" }
       },
       {
         "path": "/404",
@@ -83,7 +84,7 @@
         "client": "CyberiaLaunch",
         "head": [],
         "body": [],
-        "headers": { "Cache-Control": "no-store", "Referrer-Policy": "no-referrer" }
+        "headers": { "Cache-Control": "no-store", "Referrer-Policy": "no-referrer", "X-Robots-Tag": "noindex" }
       }
     ]
   },

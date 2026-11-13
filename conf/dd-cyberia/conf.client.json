@@ -428,102 +428,122 @@
         "path": "/",
         "title": "Home",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/settings",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/log-in",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/sign-up",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/log-out",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/account",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/server",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/chat",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/recover",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/object-layer-engine",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/object-layer-engine-management",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/object-layer-engine-viewer",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/object-layer",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "sitemap": false
       },
       {
         "path": "/cyberia-studio",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-map-engine",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-universe-engine",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-instance-engine",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-economy-engine",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-market-engine",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-player-manager",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/docs",
@@ -533,38 +553,45 @@
       {
         "path": "/cyberia-action-engine",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-entity-engine",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-saga-engine",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-content-lifecycle",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-procedural-engine",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/cyberia-item-catalog",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       },
       {
         "path": "/instance-selection",
         "title": "Select World",
         "client": "CyberiaPortal",
-        "ssr": "CyberiaPortal"
+        "ssr": "CyberiaPortal",
+        "noindex": true
       }
     ],
     "dists": [
